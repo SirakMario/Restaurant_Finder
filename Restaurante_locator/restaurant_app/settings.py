@@ -112,7 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
-GOOGLE_API_KEY = os.environ.get('RESTAURANT_MAPS_API')
+GOOGLE_API_KEY = "TYPE YOUR GOOGLE API KEY HERE"
 
 
 LANGUAGE_CODE = 'en-us'
