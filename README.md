@@ -91,40 +91,39 @@ Users can comment on the restaurant they have been to. They can also update the 
 # Django Model
 This project leverages Django, a high-level Python web framework, in conjunction with PostgreSQL as the backend database engine. Django follows the Model-View-Template (MVT) architecture, where:
 
-Model (M): Handles interactions with the database and manages data.It is a blueprint that    
-           defines how the data should be ornaginzed and stored in the database.
-View (V): Implements business logic, communicates with models to fetch data, and renders       
-           templates.The View receives HTTP requests from clients, such as web browsers or 
-           mobile apps, and processes them according to the application's requirements. It retrieves necessary data from the Model layer, applies any necessary transformations 
-          or computations, and selects the appropriate response to be returned to the client.
+Model (M): Handles interactions with the database and manages data.It is a blueprint that defines how the data should be ornaginzed and stored in the database.
 
-Template (T): Acts as the presentation layer, responsible for managing the User Interface    
-             components of the application.This is where the html and css files are stored.
+
+View (V): Implements business logic, communicates with models to fetch data, and renders templates.The View receives HTTP requests from clients, such as web browsers or mobile apps, and processes them according to the application's requirements. It retrieves necessary data from the Model layer, applies any necessary transformations or computations, and selects the appropriate response to be returned to the client.
+
+Template (T): Acts as the presentation layer, responsible for managing the User Interface components of the application.This is where the html and css files are stored.
 
 
 
 #  Project Structure
-The project is organized into several components:
+The project folder consists of folders and python scripts that are required for the functionality of the website. The function of each folder is explained below. vital scripts in certain folders are also explained underneath their parent folders below.
 
-Restaurant_app: This serves as the primary app and encompasses settings, URL configurations, as well as WSGI (Web Server Gateway Interface) and ASGI (Asynchronous Server Gateway Interface) setups.
+- accounts
+These accounts handles the registeration, logging in and loggin out of users.
 
-Accounts, pages, and restaurants apps: These are additional apps that fulfill specific functionalities.
+- media 
+When the admin adds a picture to a restaurant or edit a restaurant's picture, the picture he uploads is stored here.
 
-Front-end folders: Other directories mainly cater to front-end aspects.
+- pages 
+This contains the views.py which has functions that displays restaurants on the home page and also has function for searching and filtering results. It also has a url.py which is responsible for redirecting of urls. The other python files are django configurations.
 
-The main folder has other sub folders.
+- restaurant_app 
+The main website folder is called 'restaurant_app'. This folder contains the configurations for the projects. In the settings.py, the django configurations needed for the website such as the base directory, the folder where the static html files will be placed and much more can be found here.
 
-- Restaurant_app folder
-The main website folder is called 'restaurant_app'. This folder contains the configurations for the projects. In the settings.py, the django configurations needed for the websites such as the base directory, the folder where the static html files will be placed and much more can be found here.
-- urls.py
-  This is responsible for running the urls. when the user accesses a certain url, the functions in this python file redirects the request to another python script depending on the url that is being accessed. If the script that the user is being directed to is another url.py, then that code will also redirect the user to another script untill it's finally redirected to a script that will render and html page which will be displayed on the website.
+*  urls.py
+This is a python file found in the restaurant_app folder.This is responsible for running the urls. when the user accesses a certain url, the functions in this python file redirects the request to another python script depending on the url that is being accessed. If the script that the user is being directed to is another url.py, then that code will also redirect the user to another script untill it's finally redirected to a script that will render and html page which will be displayed on the website. The other files found inside this folder are related to django functioanlity and settings
 
-- Restaurants folder
+- restaurants
 
 * Migrations
 This folder has scripts that creates tables in the postgres database. when this script is run, the tables and columns in the script will be created in the postgres.'python manage.py makemigrations' and then 'python manage.py migrate' commands are used to create the table.
 
-* Urls.py
+* urls.py
 This script redirects the user to a python script or python function in a script based on the url request that is being made.
 
 *  admin.py
@@ -139,26 +138,17 @@ This python file has the comment form that is rendered when the user needs to ma
 *choices.py
 It has the choices the user has to select on various part of the website.
 
-- Static Folder
+- static 
 This contains the html and css files that are used on the website.
 
--Templates
+-templates
 Contains part of the html and css files that are used on the website
 
-- Media Folder
-When the admin adds a picture to a restaurant or edit a restaurant's picture, the picture he uploads is stored here.
-
-- Accounts
-These accounts handles the registeration, logging in and loggin out of users.
-
--Pages Folder
-This contains the views.py which has functions that displays restaurants on the home page and also has function for searching and filtering results. It also has a url.py which is responsible for redirecting of urls. The other python files are django configurations.
+-manage.py
+This is the main script that is run by the 'python manage.py runserver' in the terminal. This generates an local IP address in the terminal that will be used to run the website.
 
 
 
-
-# Utilities
-The manage.py script is a command-line utility that streamlines interaction with the Django project, allowing for tasks such as database migrations and server management.
 
 # How to run the website
 1. Python Packages Used
@@ -172,13 +162,13 @@ In order to run the website from the code, make sure you have these python packa
   2. Ensure that you have the proper database configuration as specified in the 'settings.py' file under the 'restaurant_app' module. 
   
   3. Migration Generation
-  run the code 'python manage.py makemigrations' and then 'python manage.py migrate' in the terminal.This will create the necessary tables in postgres. Ensure that your current directory is the main folder.
+  run the code **'python manage.py makemigrations'** and then **'python manage.py migrate'** in the terminal.This will create the necessary tables in postgres. Ensure that your current directory is the main folder.
 
  4. ETL Execution (Extract, Transform, Load)
-    In order to retrieve the information from the google maps API onto the postgres database, you need to run the command 'python manage.py load_restaurants'
+    In order to retrieve the information from the google maps API onto the postgres database, you need to run the command **'python manage.py load_restaurants'**
 
  5. Launching the Server
- To run the websites, you need to run the command 'python manage.py runserver'
+ To run the website, you need to run the command **'python manage.py runserver'**
 
 
 
