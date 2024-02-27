@@ -36,7 +36,7 @@ Open Streets Map and Leaflet Js was used to create a map where users could navig
 
 
 # The Website.
-![website pciture](https://github.com/geotech-programming-project/restaurante-finder-final/blob/main/Restaurante_locator/website.png)
+![website pciture](https://github.com/geotech-programming-project/restaurante-finder-final/blob/main/website.png)
 The website is made of different pages. The pages are as follows:
 - Home
 - About
@@ -100,6 +100,7 @@ Template (T): Acts as the presentation layer, responsible for managing the User 
 
 
 #  Project Structure
+![folder_structure](https://github.com/geotech-programming-project/restaurante-finder-final/blob/main/file_structure.png)
 The project folder consists of folders and python scripts that are required for the functionality of the website. The function of each folder is explained below. vital scripts in certain folders are also explained underneath their parent folders below.
 
 - accounts
@@ -173,9 +174,10 @@ In order to run the website from the code, make sure you have these python packa
 - googlemaps 4.10.0
 - requests 2.31.0
 
-  2. Ensure that you have the proper database configuration as specified in the 'settings.py' file under the 'restaurant_app' module. 
+  2. Ensure that you have the proper database configuration as specified in the 'settings.py' file under the 'restaurant_app' module.
+  ![configurations](https://github.com/geotech-programming-project/restaurante-finder-final/blob/main/configuration_picture.png)
   
-  3. Migration Generation
+  4. Migration Generation
   run the code **'python manage.py makemigrations'** and then **'python manage.py migrate'** in the terminal.This will create the necessary tables in postgres. Ensure that your current directory is the main folder.
 
  4. ETL Execution (Extract, Transform, Load)
