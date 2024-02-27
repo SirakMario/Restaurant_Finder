@@ -111,3 +111,4 @@ The Django application itself was served on the top of Docker containers, which 
 To host the application in the World Wide Web, the authors made use of a Azure Virtual Machine (VM), which functions as a Server for us in this project. The specific configuration of the Server as set through a terraform file (IaC).
 
 
+![website pciture](https://github.com/geotech-programming-project/restaurante-finder-final/blob/main/restaurante_app_tech_diagram.jpg)
