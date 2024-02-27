@@ -112,3 +112,18 @@ To host the application in the World Wide Web, the authors made use of a Azure V
 
 
 ![website pciture](https://github.com/geotech-programming-project/restaurante-finder-final/blob/main/restaurante_app_tech_diagram.png)
+
+in order to make the application available online, a few commands must be run sequentially:
+
+### From within an azure shell, terraform may be used to spin up Azure cloud resources in a Infrastructure as Code (IaC) manner.
+#### ´terraform init´
+
+### Then a terraform script (azure_vm.tf) may guide the creation of the cloud reseurces we need
+#### ´terraform apply´
+
+### Get into the Azure Virtual Machine
+#### ´ssh useradmin@<public_ip>´
+
+### Build the docker-compose application
+#### ´docker-compose up --build´
+
