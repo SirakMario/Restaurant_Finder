@@ -1,2 +1,0 @@
-restaurant app
-Django works as MVT system design
