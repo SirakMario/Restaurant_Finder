@@ -1,6 +1,5 @@
-# restaurante-finder-final
+# restaurante-finder-final-app
 
-# restaurante-finder-app
 GeoTech group programming course repo
 
 Developers: 
