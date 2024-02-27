@@ -175,7 +175,7 @@ In order to run the website from the code, make sure you have these python packa
   run the code 'python manage.py makemigrations' and then 'python manage.py migrate' in the terminal.This will create the necessary tables in postgres. Ensure that your current directory is the main folder.
 
  4. ETL Execution (Extract, Transform, Load)
-    In order to retrieve the information from the google maps API onto the postgres database, you need to run the command 'python manage.py load restaurants'
+    In order to retrieve the information from the google maps API onto the postgres database, you need to run the command 'python manage.py load_restaurants'
 
  5. Launching the Server
  To run the websites, you need to run the command 'python manage.py runserver'
