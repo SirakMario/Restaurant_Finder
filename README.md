@@ -48,26 +48,33 @@ The website is made of different pages. The pages are as follows:
 - Logout Button (If the user is logged in)
 
 - HOME
+  
 The main page is the home page. The home page initially displays few top highly rated restaurants.The user additionally has the choice to select the university they want to explore for nearby restaurants, along with specifying the rating of the restaurants they wish to view.The restaurants that meet the requirments are displayed when the user clicks on the submit form button.
    These restaurants are obtained from the database which contains the restaurants that were obtained from the google api and the ones that were added by the admin. The addition of restaurants by the admin would be explained further in this Read Me. The user can filter the restaurants that are being displayed by searhing by the restaurant name. The other parts of the website just gives additional information on what the user can do with the app such as leaving a review, finding a restaurant near him and requesting an addition of a new restaurant.
 
 - About
+  
 This page gives a brief overview of what the website is about. It also shows the people who developed the website namely, Joseph, Guilherme and Sirak alongside their respective email accounts. This will allow the user to contacdt any of the developers if they experience a problem with the website or want to add their restaurant on to the website. There is also a button named "View Restaurants" which users can use to go the "Restaurants" page directly.
 
 - Map
+  
 This page shows a map that was created with leaflet. The default base map is Opem Street Up. The user can use the layer control icon on the top right to change the base map to Satellite Map, Google Street Map or Hybrid ( which combines the satellite map and the google street map). The user can utilize the dropdown button located below the layer control to determine which university they wish to observe regarding restaurants around the school they intend to locate.
 When the user selects a university from the drop down list, the map is zoomed to that particular university and the university can be seen with a green marker while the restaurants near the university are displayed with a green marker. The Location of the user is displayed with a blue circle. Additionally, the user can click on a restaurant icon to display the name of the restaurant. This is to give the user an idea of the
 
 - Restaurants
+  
 This page lets users see all the restaurants in our database without any limits. Users can explore freely without needing to set any rules or conditions. It's like opening a door to a world of different places to eat.
 
 -Register
+
 This button is used for registering new users on to the platform. Users must provide their name, username, email and password in order to register. An email is automatically sent to the user after they register to welcome them to the platform.
 
 - Login
-  A user who has already been registered on the platform can login in with his user name and password.
+  
+A user who has already been registered on the platform can login in with his user name and password.
 
 - Logout
+  
 A user who is logged in can log out of the website using the logout button.
 
 # Website Functionality
