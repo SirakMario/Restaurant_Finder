@@ -95,7 +95,7 @@ Model (M): Handles interactions with the database and manages data.It is a bluep
            defines how the data should be ornaginzed and stored in the database.
 View (V): Implements business logic, communicates with models to fetch data, and renders       
            templates.The View receives HTTP requests from clients, such as web browsers or 
-           mobile apps, and processes them according to the application's requirements. It                 retrieves necessary data from the Model layer, applies any necessary transformations 
+           mobile apps, and processes them according to the application's requirements. It retrieves necessary data from the Model layer, applies any necessary transformations 
           or computations, and selects the appropriate response to be returned to the client.
 
 Template (T): Acts as the presentation layer, responsible for managing the User Interface    
