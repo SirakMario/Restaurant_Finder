@@ -1,0 +1,14 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+    <h1 class="px-5 py-2">Add Comment</h1>
+    <div class="container m-5">
+        <form method = "POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input class="btn btn-primary btn-block" type="submit" name="Submit">
+            <hr>
+        </form>
+    </div>
+{% endblock %}
