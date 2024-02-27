@@ -37,6 +37,7 @@ Open Streets Map and Leaflet Js was used to create a map where users could navig
 
 
 # The Website.
+![website pciture](https://github.com/geotech-programming-project/restaurante-finder-final/blob/main/Restaurante_locator/website.png)
 The website is made of different pages. The pages are as follows:
 - Home
 - About
