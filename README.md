@@ -174,17 +174,21 @@ In order to run the website from the code, make sure you have these python packa
 - googlemaps 4.10.0
 - requests 2.31.0
 
-  2. Ensure that you have the proper database configuration as specified in the 'settings.py' file under the 'restaurant_app' module.
+2. Ensure that you have the proper database configuration as specified in the 'settings.py' file under the 'restaurant_app' module.
+  
   ![configurations](https://github.com/geotech-programming-project/restaurante-finder-final/blob/main/configuration_picture.png)
   
-  4. Migration Generation
-  run the code **'python manage.py makemigrations'** and then **'python manage.py migrate'** in the terminal.This will create the necessary tables in postgres. Ensure that your current directory is the main folder.
+3. Migration Generation
 
- 4. ETL Execution (Extract, Transform, Load)
-    In order to retrieve the information from the google maps API onto the postgres database, you need to run the command **'python manage.py load_restaurants'**
+run the code **'python manage.py makemigrations'** and then **'python manage.py migrate'** in the terminal.This will create the necessary tables in postgres. Ensure that your current directory is the main folder.
 
- 5. Launching the Server
- To run the website, you need to run the command **'python manage.py runserver'**
+4. ETL Execution (Extract, Transform, Load)
+
+In order to retrieve the information from the google maps API onto the postgres database, you need to run the command **'python manage.py load_restaurants'**
+
+5. Launching the Server
+ 
+To run the website, you need to run the command **'python manage.py runserver'**
 
 
 
