@@ -104,53 +104,68 @@ Template (T): Acts as the presentation layer, responsible for managing the User 
 The project folder consists of folders and python scripts that are required for the functionality of the website. The function of each folder is explained below. vital scripts in certain folders are also explained underneath their parent folders below.
 
 - accounts
+  
 These accounts handles the registeration, logging in and loggin out of users.
 
-- media 
+- media
+  
 When the admin adds a picture to a restaurant or edit a restaurant's picture, the picture he uploads is stored here.
 
-- pages 
+- pages
+  
 This contains the views.py which has functions that displays restaurants on the home page and also has function for searching and filtering results. It also has a url.py which is responsible for redirecting of urls. The other python files are django configurations.
 
-- restaurant_app 
+- restaurant_app
+  
 The main website folder is called 'restaurant_app'. This folder contains the configurations for the projects. In the settings.py, the django configurations needed for the website such as the base directory, the folder where the static html files will be placed and much more can be found here.
 
 *  urls.py
+  
 This is a python file found in the restaurant_app folder.This is responsible for running the urls. when the user accesses a certain url, the functions in this python file redirects the request to another python script depending on the url that is being accessed. If the script that the user is being directed to is another url.py, then that code will also redirect the user to another script untill it's finally redirected to a script that will render and html page which will be displayed on the website. The other files found inside this folder are related to django functioanlity and settings
 
 - restaurants
 
-* Migrations
+* migrations
+  
 This folder has scripts that creates tables in the postgres database. when this script is run, the tables and columns in the script will be created in the postgres.'python manage.py makemigrations' and then 'python manage.py migrate' commands are used to create the table.
 
 * urls.py
+  
 This script redirects the user to a python script or python function in a script based on the url request that is being made.
 
 *  admin.py
+  
 Django creates an inbuilt administator page where the administator of the websites can edit infomation from that page. The admin needs to login with his credenials and he will be able to manage information from this page. The admin.py in this folder and other folders is responsible for adding additional information on the admin page.
 
 * apps.py
+  
 This was created by default by django
 
 * forms.py
+  
 This python file has the comment form that is rendered when the user needs to make a comment on a restaurant.
 
 *choices.py
+
 It has the choices the user has to select on various part of the website.
 
-- static 
+- static
+
 This contains the html and css files that are used on the website.
 
 -templates
+
 Contains part of the html and css files that are used on the website
 
 -manage.py
+
 This is the main script that is run by the 'python manage.py runserver' in the terminal. This generates an local IP address in the terminal that will be used to run the website.
 
 
 
 
 # How to run the website
+
 1. Python Packages Used
 In order to run the website from the code, make sure you have these python packages installed:
 - Django 5.0.1
