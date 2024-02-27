@@ -1,0 +1,171 @@
+{% extends 'base.html'%}
+
+{% block content %}
+  <section id="showcase-inner" class="py-5 text-white">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <h1 class="display-4">{{restaurant.name}}</h1>
+          <p class="lead">
+            <i class="fas fa-map-marker"></i> {{restaurant.address}}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Breadcrumb -->
+  <section id="bc" class="mt-3">
+    <div class="container">
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="{% url 'index'%}">Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="{% url 'restaurants' %}">Restaurants</a>
+          </li>
+          <li class="breadcrumb-item active">{{restaurant.name}}</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Listing -->
+  <section id="listing" class="py-4">
+    <div class="container">
+      <a href="{% url 'restaurants'%}" class="btn btn-light mb-4">Back To All Restaurants</a>
+      <div class="row">
+        <div class="col-md-9">
+          <!-- Home Main Image -->
+          <!--Leaflet-js-->
+            <div id="map" style="height: 100vh; width:100%;"></div>
+            <script>
+                var map = L.map('map').setView([38.7223, -9.1393], 8);
+                L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                }).addTo(map);
+                
+                L.marker([{{ restaurant.latitude }}, {{ restaurant.longtitude }}]).addTo(map)
+                  .bindPopup('<b>{{ restaurant.name }}</b>').openPopup();
+                var routingControl;
+                var userMarker;
+
+                navigator.geolocation.watchPosition(success,error)
+
+                function success(position) {
+                    var lat = position.coords.latitude;
+                    var long = position.coords.longitude;
+
+                    if (routingControl !== undefined) {
+                        map.removeControl(routingControl);
+                    }
+
+                    if (userMarker !== undefined) {
+                        map.removeLayer(userMarker)
+                    }
+
+                    // Create a CircleMarker for the user's location
+                    userMarker = L.circleMarker([lat, long], {
+                        radius: 8, // Adjust the radius as needed
+                        color: 'blue', // Adjust the color as needed
+                        fillColor: '#007bff', // Adjust the fill color as needed
+                        fillOpacity: 1 // Adjust the fill opacity as needed
+                    }).addTo(map);
+
+                    // Create a marker for the destination
+                    var destinationMarker = L.marker([{{ restaurant.latitude }}, {{ restaurant.longtitude }}]).addTo(map); // Sirak, pass in the location of the restaurant here
+
+                    // Create new routing control
+                    routingControl = L.Routing.control({
+                        waypoints: [
+                            L.latLng(lat, long),
+                            L.latLng([{{ restaurant.latitude }}, {{ restaurant.longtitude }}]) // pass it here also
+                        ],
+                        draggableWaypoints: false
+                    }).addTo(map);
+                }
+
+                function error(err) {
+                    if (err.code === 1) {
+                        alert("Please allow geolocation access");
+                    } else {
+                        pass;
+                    }
+                }
+            </script>
+        </div>
+        <div class="col-md-3">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title">Comment ({{ num_comments }})</h5>
+              {% if not restaurant.comments.all %}
+                  <p>No comments added yet</p>
+                  {% comment %} {% if request.user.is_authenticated %}
+                    <p><a class="btn btn-primary" href="{% url 'add-comment' restaurant.id %}">Add Comment</a></p>
+                  {% endif %} {% endcomment %}
+              {% else %}
+                  {% for comment in restaurant.comments.all %}
+                      <h5><strong>{{ comment.commenter_name }}</strong></h5>
+                      <p>{{ comment.comment_body }}</p>
+                      <p><i class="fas fa-star"> {{ comment.user_rating}} </i></p>
+                      <p><small>{{ comment.date_added }}</small></p>
+                      {% if request.user.username == comment.commenter_name %}
+                          <p><a class="btn btn-primary" href="{% url 'edit-comment' comment.id %}">Edit Comment</a></p>
+                          <p><a class="btn btn-danger" href="{% url 'delete-comment' restaurant.id %}">Delete Comment</a></p>
+                      {% endif %}
+                      
+                      <hr>
+                  {% endfor %}
+              {% endif %}
+              {% if request.user.is_authenticated %}
+                {% if not existing_comment %}
+                  <p><a class="btn btn-primary" href="{% url 'add-comment' restaurant.id %}">Add Comment</a></p>
+                {% endif %}
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Inquiry Modal -->
+  <div class="modal fade" id="inquiryModal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="inquiryModalLabel">Make An Inquiry</h5>
+          <button type="button" class="close" data-dismiss="modal">
+            <span>&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="property_name" class="col-form-label">Property:</label>
+              <input type="text" name="listing" class="form-control" value="45 Drivewood Cirlce" disabled>
+            </div>
+            <div class="form-group">
+              <label for="name" class="col-form-label">Name:</label>
+              <input type="text" name="name" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="email" class="col-form-label">Email:</label>
+              <input type="email" name="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="phone" class="col-form-label">Phone:</label>
+              <input type="text" name="phone" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="message" class="col-form-label">Message:</label>
+              <textarea name="message" class="form-control"></textarea>
+            </div>
+            <hr>
+            <input type="submit" value="Send" class="btn btn-block btn-secondary">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
