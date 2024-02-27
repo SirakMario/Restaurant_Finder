@@ -101,3 +101,13 @@ A user who is logged in can log out of the website using the logout button.
 ### Django Model
 
 This project leverages Django, a high-level Python web framework, in conjunction with PostgreSQL
+
+### Docker Containers
+
+The Django application itself was served on the top of Docker containers, which enable the architecture to be designed in microservices. Therefore we got 2 containers (services): The Django app and the PostgreSQL database.
+
+### Azure Virtual Machine
+
+To host the application in the World Wide Web, the authors made use of a Azure Virtual Machine (VM), which functions as a Server for us in this project. The specific configuration of the Server as set through a terraform file (IaC).
+
+
