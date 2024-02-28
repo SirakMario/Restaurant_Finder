@@ -13,7 +13,7 @@ Developers:
 - Guilherme Viegas
 
 ## About the App
-![website picture](https://github.com/geotech-programming-project/restaurante-finder-final/blob/main/website.png)
+![website picture]([https://github.com/geotech-programming-project/restaurante-finder-final/blob/main/website.png](https://github.com/geotech-programming-project/restaurante-finder-final/blob/main/new_website_image.png))
 
 Resturante locator is a website created to help Geospatial Technology students locate a suitable restaurant near the campus. It allows users to filter by certain preferences and also allows users to comment on their experience in a restaurant they visited. Users also have an additional feature where they can use the website to get directions to a chosen restaurant. Restaurants close to Nova Information Management School (NOVA IMS) Lisbon, University of Münster, Institute for Geoinformatics (ifgi), and Universitat Jaume I (UJI) were considered for the app since these are the partner universities for the Geospatial Technologies program.
 
