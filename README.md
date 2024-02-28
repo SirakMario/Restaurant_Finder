@@ -97,7 +97,7 @@ A user who is logged in can log out of the website using the logout button.
 
 - **Navigation:** Upon selecting a restaurant of interest, users are redirected to another page featuring a map interface. On this page, a routing path is displayed, guiding users from their current location to the selected restaurant. This interactive map enhances user experience by providing clear directions to the desired destination.
 
-- **Commenting:** Users can comment on the restaurant they have been to. They can also update the comments they have posted about the restaurant. Additionally, they can delete the comment they have posted. This gives the restaurants a Create, Read, Update, and Delete functionality.
+- **Commenting and rating:** Users can comment on the restaurant they have been to. They can also update the comments they have posted about the restaurant. Additionally, they can delete the comment they have posted. This gives the restaurants a Create, Read, Update, and Delete functionality.
 
 ## How the website runs
 
