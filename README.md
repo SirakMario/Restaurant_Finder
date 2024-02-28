@@ -182,7 +182,7 @@ In order to run the website from the code, make sure you have these python packa
   ![configurations](https://github.com/geotech-programming-project/restaurante-finder-final/blob/main/configuration_picture.png)
   
 - **Migration Generation:**
-run the code **'python manage.py makemigrations'** and then **'python manage.py migrate'** in the terminal.This will create the necessary tables in postgres. Ensure that your current directory is the main folder.
+run the code ####`python manage.py makemigrations` and then **'python manage.py migrate'** in the terminal.This will create the necessary tables in postgres. Ensure that your current directory is the main folder.
 
 - **ETL Execution (Extract, Transform, Load):**
 
