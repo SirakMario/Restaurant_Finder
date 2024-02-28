@@ -107,19 +107,19 @@ This project leverages Django, a high-level Python web framework, in conjunction
 ![folder_structure](https://github.com/geotech-programming-project/restaurante-finder-final/blob/main/file_structure.png)
 The project folder consists of folders and python scripts that are required for the functionality of the website. The function of each folder is explained below. vital scripts in certain folders are also explained underneath their parent folders below.
 
-- **accounts:**
+### accounts:
   
 These accounts handles the registeration, logging in and loggin out of users.
 
-- **media:**
+### media:
   
 When the admin adds a picture to a restaurant or edit a restaurant's picture, the picture he uploads is stored here.
 
-- **pages:**
+### pages
   
 This contains the views.py which has functions that displays restaurants on the home page and also has function for searching and filtering results. It also has a url.py which is responsible for redirecting of urls. The other python files are django configurations.
 
-- **restaurant_app:**
+### restaurant_app
   
 The main website folder is called 'restaurant_app'. This folder contains the configurations for the projects. In the settings.py, the django configurations needed for the website such as the base directory, the folder where the static html files will be placed and much more can be found here.
 
@@ -127,7 +127,7 @@ The main website folder is called 'restaurant_app'. This folder contains the con
   
 This is a python file found in the restaurant_app folder.This is responsible for running the urls. when the user accesses a certain url, the functions in this python file redirects the request to another python script depending on the url that is being accessed. If the script that the user is being directed to is another url.py, then that code will also redirect the user to another script untill it's finally redirected to a script that will render and html page which will be displayed on the website. The other files found inside this folder are related to django functioanlity and settings
 
-- **restaurants:**
+### restaurants:
 
 * migrations
   
@@ -149,19 +149,19 @@ This was created by default by django
   
 This python file has the comment form that is rendered when the user needs to make a comment on a restaurant.
 
-*choices.py
+* choices.py
 
 It has the choices the user has to select on various part of the website.
 
-- **static:**
+### static:
 
 This contains the html and css files that are used on the website.
 
-- **templates:**
+### templates:
 
 Contains part of the html and css files that are used on the website
 
-- **manage.py:**
+### manage.py:
 
 This is the main script that is run by the 'python manage.py runserver' in the terminal. This generates an local IP address in the terminal that will be used to run the website.
 
