@@ -107,19 +107,19 @@ This project leverages Django, a high-level Python web framework, in conjunction
 ![folder_structure](https://github.com/geotech-programming-project/restaurante-finder-final/blob/main/file_structure.png)
 The project folder consists of folders and python scripts that are required for the functionality of the website. The function of each folder is explained below. vital scripts in certain folders are also explained underneath their parent folders below.
 
-- **Filtering:**
+- **accounts:**
   
 These accounts handles the registeration, logging in and loggin out of users.
 
-- **Filtering:**
+- **media:**
   
 When the admin adds a picture to a restaurant or edit a restaurant's picture, the picture he uploads is stored here.
 
-- **Filtering:**
+- **pages:**
   
 This contains the views.py which has functions that displays restaurants on the home page and also has function for searching and filtering results. It also has a url.py which is responsible for redirecting of urls. The other python files are django configurations.
 
-- **Filtering:**
+- **restaurant_app:**
   
 The main website folder is called 'restaurant_app'. This folder contains the configurations for the projects. In the settings.py, the django configurations needed for the website such as the base directory, the folder where the static html files will be placed and much more can be found here.
 
@@ -127,7 +127,7 @@ The main website folder is called 'restaurant_app'. This folder contains the con
   
 This is a python file found in the restaurant_app folder.This is responsible for running the urls. when the user accesses a certain url, the functions in this python file redirects the request to another python script depending on the url that is being accessed. If the script that the user is being directed to is another url.py, then that code will also redirect the user to another script untill it's finally redirected to a script that will render and html page which will be displayed on the website. The other files found inside this folder are related to django functioanlity and settings
 
-- **Filtering:**
+- **restaurants:**
 
 * migrations
   
@@ -153,15 +153,15 @@ This python file has the comment form that is rendered when the user needs to ma
 
 It has the choices the user has to select on various part of the website.
 
-- **Filtering:**
+- **static:**
 
 This contains the html and css files that are used on the website.
 
-- **Filtering:**
+- **templates:**
 
 Contains part of the html and css files that are used on the website
 
-- **Filtering:**
+- **manage.py:**
 
 This is the main script that is run by the 'python manage.py runserver' in the terminal. This generates an local IP address in the terminal that will be used to run the website.
 
@@ -169,7 +169,7 @@ This is the main script that is run by the 'python manage.py runserver' in the t
 
 # How to run the website with Django
 
-- **Filtering:**
+- **Python Packages used:**
 In order to run the website from the code, make sure you have these python packages installed:
 - Django 5.0.1
 - psycopg2 2.9.9
@@ -177,18 +177,18 @@ In order to run the website from the code, make sure you have these python packa
 - googlemaps 4.10.0
 - requests 2.31.0
 
-- **Filtering:**
+- **Ensure that you have the proper database configuration as specified in the 'settings.py' file under the 'restaurant_app' module.:**
   
   ![configurations](https://github.com/geotech-programming-project/restaurante-finder-final/blob/main/configuration_picture.png)
   
-- **Filtering:**
+- **Migration Generation:**
 run the code **'python manage.py makemigrations'** and then **'python manage.py migrate'** in the terminal.This will create the necessary tables in postgres. Ensure that your current directory is the main folder.
 
-- **Filtering:**
+- **ETL Execution (Extract, Transform, Load):**
 
 In order to retrieve the information from the google maps API onto the postgres database, you need to run the command **'python manage.py load_restaurants'**
 
-- **Filtering:**
+- **Launching the Server:**
  
 To run the website, you need to run the command **'python manage.py runserver'**
 
