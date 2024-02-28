@@ -108,7 +108,7 @@ This project leverages Django, a high-level Python web framework, in conjunction
 
 #  Project Structure
 ![folder_structure](https://github.com/geotech-programming-project/restaurante-finder-final/blob/main/file_structure.png)
-The project folder consists of folders and python scripts that are required for the functionality of the website. The function of each folder is explained below. vital scripts in certain folders are also explained underneath their parent folders below.
+The project folder consists of folders and python scripts that are required for the functionality of the website.The folders required for running the django code are found in the **app folder** of the repository. The function of each django folder is explained below. vital scripts in certain folders are also explained underneath their parent folders below.
 
 ### accounts:
   
