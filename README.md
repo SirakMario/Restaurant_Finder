@@ -23,7 +23,7 @@ The entire process of the website can be divided into three main components, nam
 1. Extract, Transform, and Load.
 2. Utilizing APIs with the Django framework to make and receive API calls.
 3. Create, Read, Update, and Delete.
-4. Docker
+4. Docker.
 
 #### 1. Extract, Transform, and Load
 
