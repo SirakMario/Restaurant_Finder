@@ -6,6 +6,7 @@
 [![Docker Version](https://img.shields.io/badge/docker-latest-blue.svg)](https://www.docker.com/)
 
 GeoTech group programming course repo
+![picture](https://github.com/geotech-programming-project/restaurante-finder-final/blob/main/file_structure.png)
 
 Developers:
 - Sirak Asfaha
