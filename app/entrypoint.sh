@@ -1,7 +1,5 @@
 #!/bin/bash
 
-
-
 # Function to check if PostgreSQL is ready
 is_postgres_ready() {
   pg_isready -h database -U user -d mydb -q
@@ -13,7 +11,6 @@ until is_postgres_ready; do
   sleep 5
 done
 echo "PostgreSQL is ready now."
-
 
 # Apply database migrations
 python manage.py makemigrations
