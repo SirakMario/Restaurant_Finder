@@ -2,6 +2,8 @@
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/release/python-380/)
 [![Django Version](https://img.shields.io/badge/django-5.0.1-green.svg)](https://www.djangoproject.com/download/)
+[![PostgreSQL Version](https://img.shields.io/badge/postgresql-latest-blue.svg)](https://www.postgresql.org/)
+[![Docker Version](https://img.shields.io/badge/docker-latest-blue.svg)](https://www.docker.com/)
 
 GeoTech group programming course repo
 
