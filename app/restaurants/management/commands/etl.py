@@ -16,8 +16,7 @@ the database.
 '''
 
 def run_etl ():
-    api_key = "AIzaSyABgdLOMdnhVT_rggwcbFMS2yDdfTpf2eY"
-
+    api_key = "--get-your-own-api-key-bro--" # AIsaStABgdLSMdnhVT_rggwcfFMS2yDdfGpd7wY
 
     # This connects to the google server with an api key
     gmaps = googlemaps.Client(key=api_key)
